@@ -1,0 +1,75 @@
+:root {
+    --bg-color: linear-gradient(90deg ,blueviolet, red, yellow);
+    --title-font: 24px;
+}
+
+
+.hover-effect {
+    border: none;
+    height: 80px;
+    width: 200px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+
+    font-size: var(--title-font);
+    background-image: var(--bg-color);
+
+    background-size: 300%;
+    background-position: left;
+
+    transition:  background-position 1s;
+}
+
+.hover-effect:hover {
+    background-position: right;
+}
+
+.bg-animation {
+    height: 500px;
+    background-image: var(--bg-color);
+
+    background-size: 400%;
+    background-position: left;
+
+    animation: testBg 20s infinite alternate;
+
+
+}
+
+@keyframes testBg {
+    0%{
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+    
+}
+
+
+
+.title {
+    font-size: var(--title-font);
+    text-transform: uppercase;
+
+    background-image: var(--bg-color);
+
+    background-size: 300%;
+    background-position: 0%;
+    animation: titleBg 3s infinite alternate;
+
+    background-clip: text;
+    color: transparent;
+}
+
+@keyframes titleBg {
+    0%{
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 100%;
+    }    
+}
